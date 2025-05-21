@@ -10,7 +10,7 @@ model = load_model()
 
 st.write("""
 # NICOLAS - CPE 019 - Final Exam""")
-file = st.file_uploader(type=["jpg", "png"])
+file = st.file_uploader("Upload weather image", type=["jpg", "png"])
 
 import cv2
 from PIL import Image, ImageOps
