@@ -9,7 +9,7 @@ def load_model():
 model = load_model()
 
 st.write("""
-# Weather Classification System""")
+# NICOLAS - CPE 019 - Final Exam""")
 file = st.file_uploader("Choose weather photo from computer", type=["jpg", "png"])
 
 import cv2
@@ -33,3 +33,5 @@ else:
   class_names = ['Cloudy', 'Rain', 'Shine', 'Sunrise']
   string = "The output is: " + class_names[np.argmax(prediction)]
   st.success(string)
+  confidence = np.max(prediction) * 100
+  st.info(f"Model confidence level: {confidence:.2f}%")
